@@ -47,7 +47,7 @@
                 //UR解码:
                 value = URLDecoder.decode(value, "utf-8");
                 System.out.println("解码后: " + value);
-                response.getWriter().write("<h1>欢迎回来，您上次访问时间为:" + value + "</h1>");
+                out.write("<h1>欢迎回来，您上次访问时间为:" + value + "</h1>");
                 break;
             }
         }
@@ -67,10 +67,14 @@
         //设置cookie的存活时间
         cookie. setMaxAge(60 * 60 * 24 * 30);//- 个月
         response.addCookie(cookie);
-        response.getWriter().write("<h1>您好，欢迎您首次访问</h1>");
+        //response.getWriter().write("<h1>您好，欢迎您首次访问</h1>");换成out就不会影响布局
+        out.write("<h1>您好，欢迎您首次访问</h1>");
+
     }
 
 %>
+<input>
+
 
 </body>
 </html>
