@@ -8,7 +8,7 @@
     <artifactId>JspDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>JspDemo</name>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

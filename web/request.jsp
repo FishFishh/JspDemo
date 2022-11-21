@@ -7,24 +7,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <SCRIPT language="JavaScript">
-    function isValid(){
-        frmLogin.submit();
-    }
-    </SCRIPT>
     <title>在线考试系统</title>
 </head>
 <body>
 <h3 style="text-align: center">jsp测试题</h3>
-测试人:    <input type="text" name="userid" value="胡飞菊"><br>
-
-班级:     <select name="classes">
+测试人: <input type="text" name="username" value="胡飞菊"><br>
+班级: <select name="classes">
     <option value="1" selected>20专软件1班</option>
     <option value="2">20专软件2班</option>
     <option value="2">20专软件3班</option>
 </select>
 <hr>
-<form name="frmLogin" action="web2.jsp" method="get">
+<form action="request2.jsp" method="get">
     1.response对象的setHeader(String name,String value)方法的作用是() 。<br>
     <input type="radio" name="1" value="A" checked>A.HTTP文件头<br>
     <input type="radio" name="1" value="B">B.设定指定名字的HTTP文件头的值<br>
@@ -47,11 +41,5 @@
     <input type="radio" name="4" value="D">D.以字符串的形式返回一个对异常的描述<br>
     <input type="submit" name="Submit" value="交卷">
 </form>
-
-<%  if (session.getAttribute("userid") !=null)%>
-欢迎您,<%=session.getAttribute("userid") %><hr>
-班级,<%=session.getAttribute("classes") %><hr>
-您本次测试成绩是:<br>
-<%=session.getAttribute("s") %>
 </body>
 </html>

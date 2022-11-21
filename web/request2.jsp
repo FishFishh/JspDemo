@@ -12,7 +12,7 @@
 <body>
 <%
     int ac_num1=0; //单选题正确的题目个数
-    int[] a=new int[8];
+    int[] a=new int[4];
     String str1=request.getParameter("1");
     String str2=request.getParameter("2");
     String str3=request.getParameter("3");
@@ -43,7 +43,13 @@
         a[4]++;
     }
 %>
-<%=ac_num1*20 %><br>
 
+<% String username = request.getParameter("username");%>
+<% String classes = request.getParameter("classes");%>
+欢迎您,<%=username %><br>
+班级,<%=classes %><br>
+
+<h3>您本次测试成绩是:<br></h3>
+<%=ac_num1*20 %><br>
 </body>
 </html>
