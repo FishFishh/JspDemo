@@ -13,10 +13,10 @@
 <h1>
     <center>添加学生信息</center>
 </h1>
-<form action="insert.jsp" method="post" target="_self">
+<form action="addsave.jsp" method="post">
     <table border=1 align="center" bgcolor="aqua">
         <tr>
-            <td>学号</td>
+            <th>学号</th>
             <td><input name="id" type="text" maxlength="20"></td>
         </tr>
         <tr>
@@ -26,8 +26,8 @@
         <tr>
             <th align="right">性别</th>
             <th align="left">
-                <input type="radio" name="1">男
-                <input type="radio" name="1">女
+                <input type="radio" name="sex">男
+                <input type="radio" name="sex">女
             </th>
         </tr>
         <tr>
@@ -42,15 +42,15 @@
         <tr>
             <td>系部</td>
             <td>
-                <select name="jiguan">
+                <select name="xibu">
                     <option value="计算机系">计算机系</option>
                     <option value="北京">艺术系</option>
                 </select>
             </td>
         </tr>
         <tr>
-        <td>电话</td>
-        <td><input name="phone" type="text" maxlength="20"></td>
+            <td>电话</td>
+            <td><input name="phone" type="text" maxlength="20"></td>
         </tr>
         <tr>
             <td>邮箱</td>
@@ -58,11 +58,13 @@
         </tr>
         <tr>
             <th colspan="2" align="center">
-                <input type="submit" name="Submit" value="添加" onclick="isValid()">
-                <input type="submit" name="Submit" value="重置" onclick="isValid()">
-            </th>
+                <button type="submit" name="submit" value="添加" >添加</button>
+                <button type="reset" value="重置">重置</button></th>
         </tr>
     </table>
+
+
+
 </form>
 </body>
 </html>
